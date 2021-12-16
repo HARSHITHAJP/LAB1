@@ -1,0 +1,248 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+/*===================================================== Navbar ====*/
+.navbar{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1.5em;
+    padding:1% 10%;
+    justify-items:space-evenly;
+    text-align: center;
+    background: #B24592;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F15F79, #B24592);
+    background: linear-gradient(to right, #F15F79, #B24592);
+    align-items: center;
+  }
+  .logobar{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .links{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1em;
+  }
+  .navbar  a{
+    text-decoration: none;
+    font-size: 1.7em;
+    font-weight: 500;
+    color:rgb(3, 2, 3);
+    padding: 1em;
+    border-radius: .5em;
+  }
+
+
+  .navbar a:hover{
+    background-color: rgb(78, 3, 62);
+    color: #fff9ff;
+  }
+
+  .active{
+    background-color:rgb(255, 141, 198);
+    color: white;
+  }
+
+
+/*===================================================== Navbar ====*/
+
+/*=====================================================Main section====*/
+.landingpage{
+    background: linear-gradient(rgba(31, 19, 31, 0.8), rgba(157, 62, 160, 0.8)), url("MEDIA/landingpagebg.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background-size: cover;
+    padding: 5%;
+    min-height: 50vh;
+    max-height: 60vh;
+}
+
+.landtext{
+    color: rgb(231, 198, 228);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5em;
+}
+
+
+.landbuttons button{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid #e780d1;
+    min-width: 10em;
+    min-height: 3em;
+    font-size: large;
+    border-radius: .5em;
+}
+
+.landbuttons button:hover {
+    background-color: #ff99e9;
+    color: rgb(7, 5, 5);
+    border: 2px solid #ff99e9;
+}
+
+.cards{
+    margin: 2% 0%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-gap: 1.5em;
+    justify-items: center;
+    padding: 2em;
+    text-align: center;
+
+}
+
+.carditem{
+    max-width: 200px;
+    padding: 10%;
+    border-radius: .5em;
+
+    box-shadow: 4px 4px 10px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 10px 1px rgba(0,0,0,0.75);
+}
+
+.carditem img{
+    max-width: 180px;
+}
+
+/*=====================================================Main section====*/
+
+
+/*-------------------Footer start ---------------------------*/
+footer{
+    background: rgb(68, 0, 53);  /* fallback for old browsers */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding:1.2em;
+}
+
+footer h3{
+  margin:0;
+  text-align: left;
+  color: #dbbadb;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer .socialmedia{
+  color:white;
+  padding-right: 10%;
+  display: grid;
+  text-align: center;
+}
+.socialmedia .icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.socialmedia img{
+  max-width: 50px;
+  padding: 1em;
+}
+/*-------------------Footer End---------------------------*/
+
+/*-------------------Scroll Bar start --------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(212, 96, 96);
+    background-color: black;
+
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(214, 34, 151);
+
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e0a4e0;
+  }
+
+  /*------------------Scroll bar End-------------------------*/
+
+
+  /*------------------RESPONSIVE DESIGN start-------------------------*/
+
+  @media screen and (max-width: 1200px) {
+
+    .navbar{
+        grid-template-columns: 1fr auto;
+        padding: 2%;
+    }
+
+    .carditem{
+        max-width: 150px;
+        padding: 5%;
+    }
+    .carditem img{
+        max-width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+
+    .navbar{
+        grid-template-columns: 2fr;
+        grid-template-columns:  auto;
+        padding: 2%;
+        grid-gap:1em;
+        justify-items: stretch;
+    }
+
+    .logobar{
+        padding: 5%;
+        justify-items:stretch;
+        border-bottom: 2px solid black;
+    }
+    .carditem{
+        max-width: 150px;
+        padding: 5%;
+    }
+    .carditem img{
+        max-width: 150px;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+
+    .navbar{
+      grid-template-columns: 1fr;
+      padding: 2%;
+      grid-gap:.5em;
+    }
+
+    .links{
+        grid-template-columns: 1fr ;
+    }
+
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    .carditem{
+        min-width: 150px;
+        padding: 5%;
+    }
+    .carditem img{
+        max-width: 80px;
+    }
+
+    footer{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    footer .socialmedia{
+        padding-right: 0;
+    }
+
+  }
+  /*------------------RESPONSIVE DESIGN end-------------------------*/

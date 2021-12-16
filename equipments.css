@@ -1,0 +1,236 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+/*===================================================== Navbar ====*/
+.navbar{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:1.5em;
+    padding:1% 10%;
+    justify-items:space-evenly;
+    text-align: center;
+    background: #B24592;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F15F79, #B24592);
+    background: linear-gradient(to right, #F15F79, #B24592);
+    align-items: center;
+  }
+  .logobar{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .links{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1em;
+  }
+  .navbar  a{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    color:rgb(3, 2, 3);
+    padding: 1em;
+    border-radius: .5em;
+  }
+
+
+  .navbar a:hover{
+    background-color: rgb(78, 3, 62);
+    color: #fff9ff;
+  }
+
+  .active{
+    background-color:rgb(255, 141, 198);
+    color: white;
+  }
+
+
+/*===================================================== Navbar ====*/
+
+/*=====================================================Main section====*/
+section{
+  padding: 10%;
+  background: linear-gradient(rgba(31, 19, 31, 0.8), rgba(157, 62, 160, 0.8)), url("MEDIA/eqbg.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background-size: cover;
+}
+table.pricetable {
+  font-family: 'Rubik', sans-serif;
+  border: none;
+  background-color: #EEE7DB;
+  width: 100%;
+
+  text-align: center;
+  border-collapse: collapse;
+}
+table.pricetable td, table.pricetable th {
+  border: none;
+  padding: 7px 7px;
+  height:3em;
+}
+table.pricetable tbody td {
+  font-size: 1.2em;
+}
+table.pricetable tr:nth-child(even) {
+  background: #e2b882;
+}
+table.pricetable thead {
+  background: #f953c6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b91d73, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b91d73, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+table.pricetable thead th {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: none;
+}
+table.pricetable thead th:first-child {
+  border-left: none;
+}
+
+
+
+/*=====================================================Main section====*/
+
+
+/*-------------------Footer start ---------------------------*/
+footer{
+    background: rgb(68, 0, 53);  /* fallback for old browsers */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding:1.2em;
+}
+
+footer h3{
+  margin:0;
+  text-align: center;
+  color: #dbbadb;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer .socialmedia{
+  color:white;
+  padding-right: 10%;
+  display: grid;
+  text-align: center;
+}
+.socialmedia .icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.socialmedia img{
+  max-width: 50px;
+  padding: 1em;
+}
+/*-------------------Footer End---------------------------*/
+
+/*-------------------Scroll Bar start --------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(212, 96, 96);
+    background-color: black;
+
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(214, 34, 151);
+
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e0a4e0;
+  }
+
+  /*------------------Scroll bar End-------------------------*/
+
+
+  /*------------------RESPONSIVE DESIGN start-------------------------*/
+
+  @media screen and (max-width: 1200px) {
+
+    .navbar{
+        grid-template-columns: 1fr auto;
+        padding: 2%;
+    }
+
+    .carditem{
+        max-width: 150px;
+        padding: 5%;
+    }
+    .carditem img{
+        max-width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+
+    .navbar{
+        grid-template-columns: 2fr;
+        grid-template-columns:  auto;
+        padding: 2%;
+        grid-gap:1em;
+        justify-items: stretch;
+    }
+
+    .logobar{
+        padding: 5%;
+        justify-items:stretch;
+        border-bottom: 2px solid black;
+    }
+    .carditem{
+        max-width: 150px;
+        padding: 5%;
+    }
+    .carditem img{
+        max-width: 150px;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+
+    .navbar{
+      grid-template-columns: 1fr;
+      padding: 2%;
+      grid-gap:.5em;
+    }
+
+    .links{
+        grid-template-columns: 1fr ;
+    }
+
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    .carditem{
+        min-width: 150px;
+        padding: 5%;
+    }
+    .carditem img{
+        max-width: 80px;
+    }
+
+    footer{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    footer .socialmedia{
+        padding-right: 0;
+    }
+
+  }
+  /*------------------RESPONSIVE DESIGN end-------------------------*/
